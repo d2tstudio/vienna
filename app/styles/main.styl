@@ -1,0 +1,60 @@
+// myStyles.styl
+$font-family-sans-serif ?= 'Lato', sans
+$font-family-serif ?= 'Merriweather', serif
+$font-family-base ?= $font-family-serif
+$font-size-base ?=         16px
+$line-height-base ?=       2.2
+
+@import '../bower_components/bootstrap-stylus/bootstrap/index.styl'
+
+// MIXINS
+smallcaps()
+  text-transform uppercase
+  letter-spacing 1px
+
+// SITE
+.header, .index, .footer, .post
+  text-align center
+
+.header, .footer
+  padding 75px 0px
+
+// HEADER
+.header
+  .avatar
+    margin 30px 0px
+    height 100px
+  .author
+      smallcaps()
+      margin-bottom 0
+  .bio
+      padding 10px 0px
+  .social
+      margin 0 auto
+
+// INDEX
+.index
+  .post
+    padding 50px 0px
+    border-bottom 1px solid #eee
+
+// SINGLE
+.single
+  .post
+    header
+      margin 50px 0px
+    .entry
+      text-align left
+
+
+// FOOTER
+
+// TYPOGRAPHY
+h5
+  smallcaps()
+  font-size 75%
+
+// FORMS
+input, button
+  smallcaps()
+  font-family $font-family-sans-serif

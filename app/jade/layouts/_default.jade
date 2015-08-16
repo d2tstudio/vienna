@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+  head
+    title Vienna
+    meta(charset='UTF-8')
+    meta(content='', name='description')
+    meta(content='', name='author')
+    meta(content='3 days', name='revisit-after')
+    link(href='http://fonts.googleapis.com/css?family=Lato:400,100,300,700,900|Merriweather:400,300,700,900' rel='stylesheet' type='text/css')
+    // build:css /styles/main.css
+    link(href='/styles/main.css', rel='stylesheet')
+    // endbuild
+
+  body(class=page)
+    .container
+      header.header
+        .row
+          .col-md-12
+            a(href="/")
+              img.avatar.img-circle(src="http://en.gravatar.com/userimage/27826342/e2a09fa47d317c1607a10432dbe89268.jpg?size=200")
+        .row
+          .col-md-12
+            p.author Derry Birkett
+        .row
+          .col-md-6.col-md-offset-3
+            p.bio Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.
+        .row
+        aside.social
+          .col-md-4.col-md-offset-4
+            ul.nav.nav-pills.nav-justified
+              li 
+                a Twitter
+              li 
+                a Facebook
+              li 
+                a Google
+
+
+      block content
+
+      // FOOTER
+      footer.footer 
+          .newsletter
+            h5 Sign up for the newsletter
+            form.form-inline
+              .form-group
+                label.sr-only(for='exampleInputEmail2') Email
+                input#exampleInputEmail2.input-sm.form-control(type='email', placeholder='jane.doe@example.com')
+              button.btn.btn-sm.btn-default(type='submit') Send invitation
+
+        
+
+    // build:js /scripts/main.js
+    
+    script(src='/bower_components/jquery/dist/jquery.js')
+    
+    script(src='/scripts/main.js')
+    // endbuild
