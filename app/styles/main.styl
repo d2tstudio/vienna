@@ -1,9 +1,15 @@
 // myStyles.styl
-$font-family-sans-serif ?= 'Lato', sans
-$font-family-serif ?= 'Merriweather', serif
-$font-family-base ?= $font-family-serif
-$font-size-base ?=         16px
-$line-height-base ?=       2.2
+$font-family-sans-serif   ?= 'Lato', sans
+$font-family-serif        ?= 'Merriweather', Georgia, serif
+$font-family-base         ?= $font-family-serif
+$font-size-base           ?= 16px
+$font-size-h1 ?=           floor($font-size-base * 2.2) // ~36px
+$font-size-h2 ?=           floor($font-size-base * 2) // ~30px
+$font-size-h3 ?=           ceil($font-size-base * 1.6) // ~24px
+$font-size-h4 ?=           ceil($font-size-base * 1.2) // ~18px
+$font-size-h5 ?=           $font-size-base
+$font-size-h6 ?=           ceil($font-size-base * 0.85) // ~12px
+$line-height-base         ?= 2
 
 @import '../bower_components/bootstrap-stylus/bootstrap/index.styl'
 
@@ -16,21 +22,47 @@ smallcaps()
 .header, .index, .footer, .post
   text-align center
 
+p
+  margin 0px 0px 2em
+
+a
+  color black
+  border-bottom 1px dotted $gray-light
+  &:hover
+    text-decoration none
+    color black
+
 .header, .footer
   padding 75px 0px
 
 // HEADER
 .header
   .avatar
-    margin 30px 0px
-    height 100px
+    margin 20px 0px
+    height 60px
   .author
       smallcaps()
       margin-bottom 0
+      letter-spacing: 2px;
+      margin-bottom: 0;
+      font-size: 12px;
+      font-weight: 600;
   .bio
       padding 10px 0px
+      font-size 14px
+
   .social
       margin 0 auto
+      font-size 12px
+      ul
+        padding 0px
+        li
+          display inline-block
+          list-style none
+          a
+            padding 1em
+            border none
+
 
 // INDEX
 .index
@@ -48,6 +80,13 @@ smallcaps()
 
 
 // FOOTER
+.footer
+  p.small
+    margin -5px 0px
+    font-size 12px
+  b
+    smallcaps()
+    font-size 9px
 
 // TYPOGRAPHY
 h5
